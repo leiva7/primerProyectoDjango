@@ -17,3 +17,22 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+        
+class Persona(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    apellido = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100)
+    dni = models.CharField(max_length=100)
+    domicilio = models.CharField(max_length=200)
+    fechaDeNacimiento = models.DateField()
+    fechaDeAlta = models.DateTimeField(default=timezone.now)
+
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+         return self.apellido
+#        return "Apellido: ", self.apellido, "Nombre: ", self.nombre, "DNI: ", self.dni , "Domicilio: ", self.domicilio, "Fecha de nacimiento: ", self.fechaDeNacimiento, "Fecha de alta: ", self.fechaDeAlta
