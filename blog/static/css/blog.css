@@ -1,5 +1,7 @@
 .page-header {
-    background-color: #ff9400;
+ /*   background-color: #ff9400; */
+ /*Se eligió el color negro para el encabezado */
+    background-color: #000000;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -15,7 +17,9 @@
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+   /* font-family: 'Lobster', cursive; */
+   /* Se cambió la letra para vincularla a una nueva letra de google fonts seleccionada e importada en base.html */
+   font-family: 'Russo One', sans-serif;
 }
 
 .date {

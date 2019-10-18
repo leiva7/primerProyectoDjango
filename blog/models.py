@@ -34,5 +34,5 @@ class Persona(models.Model):
         self.save()
 
     def __str__(self):
-         return self.apellido
-#        return "Apellido: ", self.apellido, "Nombre: ", self.nombre, "DNI: ", self.dni , "Domicilio: ", self.domicilio, "Fecha de nacimiento: ", self.fechaDeNacimiento, "Fecha de alta: ", self.fechaDeAlta
+         return self.dni
+

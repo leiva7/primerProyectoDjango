@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% block content %}
+<!--
     {% for post in posts %}
         <div class="post">
             <div class="date">
@@ -7,6 +8,13 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+ -->
+     {% for persona in personas %}
+        <div class="post">
+            <h1><a href="{% url 'post_detail' pk=persona.pk %}">{{ persona.apellido }},{{ persona.nombre}}</a></h1>
+            <p>{{ persona.dni}}</p>
         </div>
     {% endfor %}
 {% endblock %}
